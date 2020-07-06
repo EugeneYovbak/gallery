@@ -1,10 +1,11 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:gallery/demo_root/root_widget.dart';
 import 'package:gallery/flare/flare_demo.dart';
 import 'package:gallery/main.dart';
+import 'package:gallery/material_animations/transition_page.dart';
 import 'package:gallery/pages/demo.dart';
 import 'package:gallery/pages/home.dart';
+import 'package:gallery/root_widget.dart';
 import 'package:gallery/studies/crane/app.dart';
 import 'package:gallery/studies/fortnightly/app.dart';
 import 'package:gallery/studies/rally/app.dart';
@@ -72,6 +73,10 @@ class RouteConfiguration {
     Path(
       r'^' + FlarePage.flareRoute,
           (context, match) => FlarePage(),
+    ),
+    Path(
+      r'^' + TransitionsPage.transitionRoute,
+          (context, match) => TransitionsPage(),
     ),
     Path(
       r'^/',

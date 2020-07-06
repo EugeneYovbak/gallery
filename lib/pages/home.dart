@@ -249,7 +249,7 @@ class _GalleryHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Header(
       color: Theme.of(context).colorScheme.primaryVariant,
-      text: GalleryLocalizations.of(context).homeHeaderGallery,
+      text: '← ' + GalleryLocalizations.of(context).homeHeaderGallery,
     );
   }
 }
@@ -356,7 +356,11 @@ class _AnimatedHomePageState extends State<_AnimatedHomePage>
             Container(
               margin:
                   const EdgeInsets.symmetric(horizontal: _horizontalPadding),
-              child: _GalleryHeader(),
+              child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).pop();
+              },
+                  child: _GalleryHeader()),
             ),
             _Carousel(
               children: widget.carouselCards,
@@ -418,7 +422,7 @@ class _AnimatedHomePageState extends State<_AnimatedHomePage>
             },
             child: SafeArea(
               child: Container(
-                height: 40,
+                height: 20,
                 // If we don't set the color, gestures are not detected.
                 color: Colors.transparent,
               ),

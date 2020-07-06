@@ -12,30 +12,27 @@ class DemoRootPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Flutter UI'),
       ),
-      body: Column(
-        children: <Widget>[
-          Center(
-            child: RaisedButton(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            RaisedButton(
                 child: const Text('Flutter Gallery'),
                 onPressed: () {
                   Navigator.of(context).pushNamed(RootPage.rootRoute);
                 }),
-          ),
-          Center(
-            child: RaisedButton(
+            RaisedButton(
                 child: const Text('Transition Animations'),
                 onPressed: () {
                   Navigator.of(context).pushNamed(TransitionsPage.transitionRoute);
                 }),
-          ),
-          Center(
-            child: RaisedButton(
+            RaisedButton(
                 child: const Text('Flare Animations'),
                 onPressed: () {
                   Navigator.of(context).pushNamed(FlarePage.flareRoute);
                 }),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

@@ -13,7 +13,6 @@ class TransitionsPage extends StatefulWidget {
 }
 
 class _TransitionsPageState extends State<TransitionsPage> {
-  bool _slowAnimations = false;
 
   @override
   Widget build(BuildContext context) {
@@ -77,23 +76,6 @@ class _TransitionsPageState extends State<TransitionsPage> {
                   },
                 ),
               ],
-            ),
-          ),
-          const Divider(height: 0.0),
-          SafeArea(
-            child: SwitchListTile(
-              value: _slowAnimations,
-              onChanged: (bool value) async {
-                setState(() {
-                  _slowAnimations = value;
-                });
-                // Wait until the Switch is done animating before actually slowing
-                // down time.
-                if (_slowAnimations) {
-                  await Future<void>.delayed(const Duration(milliseconds: 300));
-                }
-              },
-              title: const Text('Slow animations'),
             ),
           ),
         ],

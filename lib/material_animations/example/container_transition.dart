@@ -433,11 +433,6 @@ class _ExampleSingleTile extends StatelessWidget {
                     'Title',
                     style: Theme.of(context).textTheme.subtitle1,
                   ),
-                  const SizedBox(height: 8),
-                  Text(
-                      'Lorem ipsum dolor sit amet, consectetur '
-                      'adipiscing elit,',
-                      style: Theme.of(context).textTheme.caption),
                 ],
               ),
             ),

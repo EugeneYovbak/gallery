@@ -661,7 +661,7 @@ class _OpenContainerRoute<T> extends ModalRoute<T> {
   Rect _getRect(GlobalKey key, RenderBox ancestor) {
     assert(key.currentContext != null);
     assert(ancestor != null && ancestor.hasSize);
-    final RenderBox render = key.currentContext.findRenderObject() as RenderBox;
+    final render = key.currentContext.findRenderObject() as RenderBox;
     assert(render != null && render.hasSize);
     return MatrixUtils.transformRect(
       render.getTransformTo(ancestor),

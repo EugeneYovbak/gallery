@@ -35,10 +35,7 @@ class _BackLayerState extends State<BackLayer> {
       index: tabIndex,
       children: [
         for (BackLayerItem backLayerItem in widget.backLayerItems)
-          ExcludeFocus(
-            excluding: backLayerItem.index != tabIndex,
-            child: backLayerItem,
-          )
+          backLayerItem
       ],
     );
   }

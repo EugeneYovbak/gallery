@@ -202,6 +202,10 @@ flutter:
     - packages/shrine_images/36-0.jpg
     - packages/shrine_images/37-0.jpg
 
+    - assets/flare/button-animation.flr
+    - assets/flare/liquid-download.flr
+    - assets/flare/switch-daytime.flr
+
   uses-material-design: true
   fonts:
     - family: GalleryIcons

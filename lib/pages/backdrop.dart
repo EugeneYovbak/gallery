@@ -158,9 +158,7 @@ class _BackdropState extends State<Backdrop>
       builder: (context, isSettingsOpen, child) {
         return ExcludeSemantics(
           excluding: !isSettingsOpen,
-          child: isSettingsOpen
-              ? RawKeyboardListener(
-                  includeSemantics: false,
+          child: RawKeyboardListener(
                   focusNode: _settingsPageFocusNode,
                   onKey: (event) {
                     if (event.logicalKey == LogicalKeyboardKey.escape) {
@@ -169,7 +167,7 @@ class _BackdropState extends State<Backdrop>
                   },
                   child: FocusScope(child: _settingsPage),
                 )
-              : ExcludeFocus(child: _settingsPage),
+
         );
       },
     );

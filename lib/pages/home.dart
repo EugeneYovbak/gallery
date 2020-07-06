@@ -8,7 +8,6 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/semantics.dart';
-
 import 'package:gallery/constants.dart';
 import 'package:gallery/data/demos.dart';
 import 'package:gallery/data/gallery_options.dart';
@@ -1098,7 +1097,7 @@ class _StudyWrapperState extends State<StudyWrapper> {
                   key: const ValueKey('Back'),
                   onPressed: () {
                     Navigator.of(context)
-                        .popUntil((route) => route.settings.name == '/');
+                        .popUntil((route) => route.settings.name == '/root' || route.settings.name == '/');
                   },
                   icon: IconTheme(
                     data: IconThemeData(color: colorScheme.onPrimary),

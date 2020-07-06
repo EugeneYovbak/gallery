@@ -1,5 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:gallery/demo_root/root_widget.dart';
+import 'package:gallery/flare/flare_demo.dart';
 import 'package:gallery/main.dart';
 import 'package:gallery/pages/demo.dart';
 import 'package:gallery/pages/home.dart';
@@ -8,6 +10,8 @@ import 'package:gallery/studies/fortnightly/app.dart';
 import 'package:gallery/studies/rally/app.dart';
 import 'package:gallery/studies/shrine/app.dart';
 import 'package:gallery/studies/starter/app.dart';
+
+import 'main.dart';
 
 typedef PathWidgetBuilder = Widget Function(BuildContext, String);
 
@@ -62,8 +66,16 @@ class RouteConfiguration {
       (context, match) => const StudyWrapper(study: StarterApp()),
     ),
     Path(
+      r'^' + RootPage.rootRoute,
+          (context, match) => const RootPage(),
+    ),
+    Path(
+      r'^' + FlarePage.flareRoute,
+          (context, match) => FlarePage(),
+    ),
+    Path(
       r'^/',
-      (context, match) => const RootPage(),
+      (context, match) => DemoRootPage(),
     ),
   ];
 
